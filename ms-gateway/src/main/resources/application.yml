@@ -15,54 +15,54 @@ spring:
           uri: lb://ms-diners #lb：负载均衡
           predicates:
             - Path=/hello/**  #路径为 /hello/** 的请求转发到名为 ms-diners 的微服务
-        - id: ms-diners
-          uri: lb://ms-diners
-          predicates:
-            - Path=/diners/**
-          filters:
-            - StripPrefix=1
-
-        - id: ms-oauth2-server
-          uri: lb://ms-oauth2-server
-          predicates:
-            - Path=/auth/**
-          filters:
-            - StripPrefix=1
-
-        - id: ms-seckill
-          uri: lb://ms-seckill
-          predicates:
-            - Path=/seckill/**
-          filters:
-            - StripPrefix=1
-
-        - id: ms-follow
-          uri: lb://ms-follow
-          predicates:
-            - Path=/follow/**
-          filters:
-            - StripPrefix=1
-
-        - id: ms-feeds
-          uri: lb://ms-feeds
-          predicates:
-            - Path=/feeds/**
-          filters:
-            - StripPrefix=1
-
-        - id: ms-points
-          uri: lb://ms-points
-          predicates:
-            - Path=/points/**
-          filters:
-            - StripPrefix=1
-
-        - id: ms-restaurants
-          uri: lb://ms-restaurants
-          predicates:
-            - Path=/restaurants/**
-          filters:
-            - StripPrefix=1
+#        - id: ms-diners
+#          uri: lb://ms-diners
+#          predicates:
+#            - Path=/diners/**
+#          filters:
+#            - StripPrefix=1
+#
+#        - id: ms-oauth2-server
+#          uri: lb://ms-oauth2-server
+#          predicates:
+#            - Path=/auth/**
+#          filters:
+#            - StripPrefix=1
+#
+#        - id: ms-seckill
+#          uri: lb://ms-seckill
+#          predicates:
+#            - Path=/seckill/**
+#          filters:
+#            - StripPrefix=1
+#
+#        - id: ms-follow
+#          uri: lb://ms-follow
+#          predicates:
+#            - Path=/follow/**
+#          filters:
+#            - StripPrefix=1
+#
+#        - id: ms-feeds
+#          uri: lb://ms-feeds
+#          predicates:
+#            - Path=/feeds/**
+#          filters:
+#            - StripPrefix=1
+#
+#        - id: ms-points
+#          uri: lb://ms-points
+#          predicates:
+#            - Path=/points/**
+#          filters:
+#            - StripPrefix=1
+#
+#        - id: ms-restaurants
+#          uri: lb://ms-restaurants
+#          predicates:
+#            - Path=/restaurants/**
+#          filters:
+#            - StripPrefix=1
 
 secure:
   ignore:

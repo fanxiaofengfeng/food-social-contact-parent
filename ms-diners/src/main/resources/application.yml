@@ -6,7 +6,7 @@ spring:
     name: ms-diners # 应用名
   # 数据库
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
     url: jdbc:mysql://127.0.0.1:3306/db_imooc?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false
@@ -18,7 +18,7 @@ spring:
     password: 123456
   # swagger
   swagger:
-    base-package: com.imooc.diners
+    base-package: com.fengzi.diners
     title: 慕课美食社交食客API接口文档
 
 # Oauth2 客户端信息
@@ -27,7 +27,7 @@ oauth2:
     client-id: appId
     secret: 123456
     grant_type: password
-    scope: api
+    scope: api   # 这是访问令牌的范围，指定了访问令牌可以访问的资源。在这个示例中，设置为"api"，表示访问API资源。
 
 # oauth2 服务地址
 service:
