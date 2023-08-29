@@ -70,11 +70,11 @@ secure:
       - /actuator/**
       - /auth/oauth/**
       - /diners/signin
-      - /diners/send
-      - /diners/checkPhone
-      - /diners/register
-      - /seckill/add
-      - /restaurants/**
+#      - /diners/send
+#      - /diners/checkPhone
+#      - /diners/register
+#      - /seckill/add
+#      - /restaurants/**
 
 # 配置 Eureka Server 注册中心
 eureka:
