@@ -15,19 +15,19 @@ spring:
           uri: lb://ms-diners #lb：负载均衡
           predicates:
             - Path=/hello/**  #路径为 /hello/** 的请求转发到名为 ms-diners 的微服务
-#        - id: ms-diners
-#          uri: lb://ms-diners
-#          predicates:
-#            - Path=/diners/**
-#          filters:
-#            - StripPrefix=1
-#
-#        - id: ms-oauth2-server
-#          uri: lb://ms-oauth2-server
-#          predicates:
-#            - Path=/auth/**
-#          filters:
-#            - StripPrefix=1
+        - id: ms-diners
+          uri: lb://ms-diners
+          predicates:
+            - Path=/diners/**
+          filters:
+            - StripPrefix=1
+
+        - id: ms-oauth2-server
+          uri: lb://ms-oauth2-server
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
 #
 #        - id: ms-seckill
 #          uri: lb://ms-seckill
